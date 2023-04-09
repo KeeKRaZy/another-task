@@ -1,0 +1,358 @@
+*{
+    padding: 0;
+    margin: 0;
+	font-family: Arial;
+    color: rgba(106, 112, 123, 1);
+    text-decoration: none;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    height: 111.3vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(242, 245, 250, 1));
+}
+
+#background{
+    position:absolute;
+    left: 663px;
+}
+
+#mobileBackground{
+    display: none;
+}
+
+/* Header part */
+
+header{
+    width: 663px;
+}
+nav{
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    padding: 100px 83px;
+    padding-right: 101px;
+}
+nav ul li{
+	display: inline-block;
+    padding-top: 13px;
+    padding-left: 26px;
+}
+
+/* Main part */
+
+main{
+    margin-top: 134px;
+    width: 663px;
+}
+.mainText{
+    width: 417px;
+    margin: 0px auto;
+}
+h1{
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 32px;
+    color:rgba(19, 24, 33, 1);
+    margin-bottom: 20px;
+}
+.mainText p{
+    line-height: 28px;
+}
+
+/* email input*/
+
+.emailForm{
+    position: absolute;
+    margin: 49px 0px 50px 83px;
+}
+#mail{
+	padding: 26px 193px 24px 36px;
+    border: 1px solid rgb(228, 227, 227);
+	border-left: 4px solid rgba(64, 102, 165, 1);
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+    transition: .2s;
+}
+#mail:hover{
+    box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+    transition: .2s;
+}
+#mail:focus{
+    border: 1px solid rgba(64, 102, 165, 1);
+	border-left: 4px solid rgba(64, 102, 165, 1);
+    outline: none;
+    box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+    transition: .2s;
+}
+#mail:focus + #submit path{
+    fill:rgba(64, 102, 165, 1);
+    opacity: 1;
+}
+#submit:hover path{
+    fill:rgba(64, 102, 165, 1);
+    opacity: 1;
+}
+#errorMessage{
+    display: inline-block;
+    position: absolute;
+    margin-top: 8px;
+    color: rgb(184, 8, 8);
+    font-weight: 700;
+    font-size: 12px;
+    opacity: 1;
+}
+#submit{
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    top: 18%;
+	left: 139.7%; 
+}
+form label{
+    display: inline-block;
+    margin-top: 54px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.checkbox input{
+    display: none;
+}
+
+#fakeCheckbox{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid rgb(227, 227, 228);
+    position: relative;
+    transition: .2s;
+}
+#fakeCheckbox::before{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: url(../img/checkMark.svg);
+    font-size: 22px;
+    opacity: 0;
+}
+.checkbox input:checked + #fakeCheckbox::before {
+    opacity: 1;
+    transition: .2s;
+}
+.checkbox input:checked + #fakeCheckbox{
+    border: 1px solid rgba(227, 227, 228, 0);
+    background-color: rgba(64, 102, 165, 1);
+    transition: .2s;
+}
+form a{
+    text-decoration: underline;
+    font-style:normal;
+    font-weight: 500;
+    color: rgb(19, 24, 33);
+}
+form a:hover{
+    color: rgba(64, 102, 165, 1);
+}
+form a:active{
+    color: rgba(35, 55, 89, 1);
+}
+#checkBoxText{
+    position: absolute;
+    top: 84%;
+    margin-left: 15px;
+}
+
+/* Footer part */
+
+footer{
+    width: 647px;
+    text-align: center;
+    margin-top: 250px;
+}
+#dividingLine{
+    background-color: rgba(227, 227, 228, 1);
+    height: 1px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+footer a + a {
+    margin-left: 16px;
+}
+
+/* social media icons */
+
+.facebook:hover circle{
+    fill:rgb(66, 103, 178);
+}
+.facebook:hover path{
+    opacity: 1;
+    fill:white;
+}
+.facebook:active circle{
+    fill:rgba(47, 74, 128, 1)
+}
+
+.instagram:hover circle{
+    fill:rgba(193, 53, 132, 1);
+}
+.instagram:hover path{
+    opacity: 1;
+    fill:white;
+}
+.instagram:active circle{
+    fill:rgba(143, 39, 98, 1)
+}
+
+.twitter:hover circle{
+    fill:rgba(29, 161, 242, 1)
+}
+.twitter:hover path{
+    opacity: 1;
+    fill:white;
+}
+.twitter:active circle{
+    fill:rgba(23, 127, 191, 1)
+}
+
+.youtube:hover circle{
+    fill:rgba(255, 0, 0, 1);
+}
+.youtube:hover path{
+    opacity: 1;
+    fill:white;
+}
+.youtube:active circle{
+    fill:rgba(204, 0, 0, 1)
+}
+
+@media screen and (max-width: 375px) {
+    *{
+        font-size: 14px;
+    }
+    body{
+        height: auto;
+        background-image: none;
+    }
+    #background{
+        display: none;
+    }
+    #mobileBackground{
+        display: unset;
+        position: absolute;
+        height: 77vh;
+        left: -74.97vw;
+    }
+
+    /* Header part */
+
+    header{
+        width: 100vw;
+        height: 6.8vh;
+    }
+    nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px;
+        padding-right: 5.5vw;
+    }
+    nav ul li{
+        padding-left: 4.5vw;
+    }
+
+    #logo{
+        width: 7vw;
+        overflow: hidden;
+        margin-top: 1vh;
+        margin-left: 5.3vw;
+    }
+
+    /* Main part */
+
+    main{
+        position: relative;
+        margin-top: 19.4vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 335px;
+        height: 371px;
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(242, 245, 250, 1));
+    }
+    .mainText{
+        width: 300px;
+        margin: 0px auto;
+        margin-left: 20px
+    }
+    h1{
+        padding-top: 33px;
+        ;
+        font-family: Georgia;
+        font-weight: 400;
+        font-size: 24px;
+        color:rgba(19, 24, 33, 1);
+        margin-bottom: 0px;
+    }
+    .mainText p{
+        line-height: 26px;
+        margin-top: 14px;
+    }
+
+    /* email input*/
+
+    .emailForm{
+        position: absolute;
+        margin: 20px 0px 49px 20px;
+    }
+    #mail{
+        padding: 21px 34px 19px 11px;
+    }
+    #errorMessage{
+        width: 350px;
+        margin-top: 4px;
+        font-size: 11px;
+    }
+    #submit{
+        top: 21%;
+        left: 104.5%; 
+    }
+    form label{
+        margin-top: 21px;
+        margin-left: 0px;
+    }
+    form a{
+        font-size: 16px;
+    }
+    #checkBoxText{
+        top: 78%;
+        font-size: 16px;
+    }
+
+    /* Footer part */
+
+    footer{
+        width: 67vw;
+        position: relative;
+        margin-top: -97px;
+        margin-left: 14.6vw;
+    }
+    #dividingLine{
+        width: 295px;
+        margin-left: -15px;
+        margin-bottom: 20px;
+    }
+    footer a + a {
+        margin-left: 6px;
+    }
+}
+
+
